@@ -1,1 +1,0 @@
-configuration_number,vectorizer_param,model_param,f1

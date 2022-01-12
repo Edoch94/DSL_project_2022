@@ -1,9 +1,0 @@
-configuration_number,vectorizer_param,model_param,f1
-1,{'max_features': None, 'ngram_range': (1, 1), 'stop_words': 'english'},{'dual': False, 'penalty': 'l1'},0.7613860879424559
-2,{'max_features': None, 'ngram_range': (1, 1), 'stop_words': 'english'},{'dual': False, 'penalty': 'l2'},0.7609151922512514
-3,{'max_features': 10000, 'ngram_range': (1, 1), 'stop_words': 'english'},{'dual': False, 'penalty': 'l1'},0.7633865949203058
-4,{'max_features': 10000, 'ngram_range': (1, 1), 'stop_words': 'english'},{'dual': False, 'penalty': 'l2'},0.7620994240064594
-5,{'max_features': 15000, 'ngram_range': (1, 1), 'stop_words': 'english'},{'dual': False, 'penalty': 'l1'},0.7628522255129566
-6,{'max_features': 15000, 'ngram_range': (1, 1), 'stop_words': 'english'},{'dual': False, 'penalty': 'l2'},0.7611480767116716
-7,{'max_features': 20000, 'ngram_range': (1, 1), 'stop_words': 'english'},{'dual': False, 'penalty': 'l1'},0.7620710527438798
-8,{'max_features': 20000, 'ngram_range': (1, 1), 'stop_words': 'english'},{'dual': False, 'penalty': 'l2'},0.7607434110575622

@@ -1,0 +1,104 @@
+File output
+
+configuration_number: 1
+vectorizer_param: 	{'max_features': None, 'ngram_range': (1, 1), 'stop_words': None}
+model_param: 		{'dual': False, 'penalty': 'l1'}
+f1_score:			0.7729580969960399
+
+              precision    recall  f1-score   support
+
+         0.0       0.75      0.71      0.73     18783
+         1.0       0.80      0.83      0.81     25807
+
+    accuracy                           0.78     44590
+   macro avg       0.78      0.77      0.77     44590
+weighted avg       0.78      0.78      0.78     44590
+
+
+******************************************************************************************************************************************************
+
+configuration_number: 2
+vectorizer_param: 	{'max_features': None, 'ngram_range': (1, 1), 'stop_words': None}
+model_param: 		{'dual': False, 'penalty': 'l2'}
+f1_score:			0.7716332285123866
+
+              precision    recall  f1-score   support
+
+         0.0       0.75      0.71      0.73     18783
+         1.0       0.80      0.83      0.81     25807
+
+    accuracy                           0.78     44590
+   macro avg       0.77      0.77      0.77     44590
+weighted avg       0.78      0.78      0.78     44590
+
+
+******************************************************************************************************************************************************
+
+configuration_number: 3
+vectorizer_param: 	{'max_features': 1000, 'ngram_range': (1, 1), 'stop_words': None}
+model_param: 		{'dual': False, 'penalty': 'l1'}
+f1_score:			0.7515012502383276
+
+              precision    recall  f1-score   support
+
+         0.0       0.75      0.66      0.70     18783
+         1.0       0.77      0.84      0.80     25807
+
+    accuracy                           0.76     44590
+   macro avg       0.76      0.75      0.75     44590
+weighted avg       0.76      0.76      0.76     44590
+
+
+******************************************************************************************************************************************************
+
+configuration_number: 4
+vectorizer_param: 	{'max_features': 1000, 'ngram_range': (1, 1), 'stop_words': None}
+model_param: 		{'dual': False, 'penalty': 'l2'}
+f1_score:			0.7516222589311239
+
+              precision    recall  f1-score   support
+
+         0.0       0.75      0.66      0.70     18783
+         1.0       0.77      0.84      0.80     25807
+
+    accuracy                           0.76     44590
+   macro avg       0.76      0.75      0.75     44590
+weighted avg       0.76      0.76      0.76     44590
+
+
+******************************************************************************************************************************************************
+
+configuration_number: 5
+vectorizer_param: 	{'max_features': 10000, 'ngram_range': (1, 1), 'stop_words': None}
+model_param: 		{'dual': False, 'penalty': 'l1'}
+f1_score:			0.7750732612435179
+
+              precision    recall  f1-score   support
+
+         0.0       0.76      0.70      0.73     18783
+         1.0       0.80      0.84      0.82     25807
+
+    accuracy                           0.78     44590
+   macro avg       0.78      0.77      0.78     44590
+weighted avg       0.78      0.78      0.78     44590
+
+
+******************************************************************************************************************************************************
+
+configuration_number: 6
+vectorizer_param: 	{'max_features': 10000, 'ngram_range': (1, 1), 'stop_words': None}
+model_param: 		{'dual': False, 'penalty': 'l2'}
+f1_score:			0.7738087681285859
+
+              precision    recall  f1-score   support
+
+         0.0       0.76      0.70      0.73     18783
+         1.0       0.80      0.84      0.82     25807
+
+    accuracy                           0.78     44590
+   macro avg       0.78      0.77      0.77     44590
+weighted avg       0.78      0.78      0.78     44590
+
+
+******************************************************************************************************************************************************
+

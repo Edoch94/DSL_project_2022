@@ -1,0 +1,9 @@
+configuration_number,vectorizer_param,model_param,f1
+1,{'max_features': None, 'ngram_range': (1, 1), 'stop_words': None},{'dual': False, 'penalty': 'l1'},0.7765573829464297
+2,{'max_features': None, 'ngram_range': (1, 1), 'stop_words': None},{'dual': False, 'penalty': 'l2'},0.7752587704217357
+3,{'max_features': 10000, 'ngram_range': (1, 1), 'stop_words': None},{'dual': False, 'penalty': 'l1'},0.7771498837006138
+4,{'max_features': 10000, 'ngram_range': (1, 1), 'stop_words': None},{'dual': False, 'penalty': 'l2'},0.7766464459737636
+5,{'max_features': 15000, 'ngram_range': (1, 1), 'stop_words': None},{'dual': False, 'penalty': 'l1'},0.7775820684176897
+6,{'max_features': 15000, 'ngram_range': (1, 1), 'stop_words': None},{'dual': False, 'penalty': 'l2'},0.7757105650320988
+7,{'max_features': 20000, 'ngram_range': (1, 1), 'stop_words': None},{'dual': False, 'penalty': 'l1'},0.7769553413745507
+8,{'max_features': 20000, 'ngram_range': (1, 1), 'stop_words': None},{'dual': False, 'penalty': 'l2'},0.7756258693809779

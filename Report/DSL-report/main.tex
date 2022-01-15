@@ -31,7 +31,20 @@ The abstract goes here. Keep it short (approx. 3-4 sentences)
 \end{abstract}
 
 \section{Problem overview}
-Here you should describe your problem
+This project concerns a classification problem applied to a collection of Twitter posts (i.e., \textit{tweets}) written by different users. The goal of the project is to perform a sentiment analysis of the posts contained in the dataset.\\
+Training and validation of the models are conducted on a development set, containing 224,994 labelled recordings, while the set to test the models contains 74,999 recordings.\\
+The development set is composed of six fields:
+\begin{itemize}
+    \item \textit{sentiment}: field of the sentiment labels; a label is associated to each record, having value \textbf{1} if the text has a positive trait, \textbf{0} otherwise;
+    \item \textit{ids}: numerical identifier of the tweet;
+    \item \textit{date}: publication date of the tweet;
+    \item \textit{flag}: query used to collect the tweet;
+    \item \textit{user}: name of the user that posted the tweet;
+    \item \textit{text}: text of the tweet. 
+\end{itemize}
+Analysing the development set it is possible to notice that it is not well balanced: 130,157 
+
+
 
 \section{Proposed approach}
 In this section, you will present your solution. Please fill in accordingly.

@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.20)  15 JAN 2022 09:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.20)  15 JAN 2022 20:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/main.tex
-(d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/main.tex
+**d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.tex
+(d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.tex
 LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-01-09> xparse <2020-03-03> (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/IEEEtran.cls
+L3 programming layer <2021-01-09> xparse <2020-03-03> (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -219,7 +219,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 File: l3backend-pdftex.def 2021-01-09 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count274
 \l__pdf_internal_box=\box51
-) (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/main.aux)
+) (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -256,7 +256,15 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (d:/Texlive_dir/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/main.bbl)
+))
+LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+ (d:/Texlive_dir/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+ (d:/Texlive_dir/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -272,20 +280,20 @@ Before submitting the final camera ready copy, remember to:
 
 
 
-] (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/main.aux) ) 
+] (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.aux) ) 
 Here is how much of TeX's memory you used:
- 3858 strings out of 479304
- 57204 string characters out of 5865279
- 341970 words of memory out of 5000000
- 21039 multiletter control sequences out of 15000+600000
- 433933 words of font info for 76 fonts, out of 8000000 for 9000
+ 3888 strings out of 479304
+ 57598 string characters out of 5865279
+ 344970 words of memory out of 5000000
+ 21055 multiletter control sequences out of 15000+600000
+ 436739 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,8n,74p,293b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
-{d:/Texlive_dir/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/main.pdf (1 page, 46325 bytes).
+ 68i,8n,74p,326b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
+{d:/Texlive_dir/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.pdf (1 page, 56830 bytes).
 PDF statistics:
- 25 PDF objects out of 1000 (max. 8388607)
- 17 compressed objects within 1 object stream
+ 29 PDF objects out of 1000 (max. 8388607)
+ 20 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

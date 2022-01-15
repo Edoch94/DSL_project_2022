@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.20)  15 JAN 2022 20:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.20)  16 JAN 2022 00:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -279,18 +279,17 @@ Before submitting the final camera ready copy, remember to:
 [1{d:/Texlive_dir/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-
 ] (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.aux) ) 
 Here is how much of TeX's memory you used:
- 3888 strings out of 479304
- 57598 string characters out of 5865279
- 344970 words of memory out of 5000000
+ 3889 strings out of 479304
+ 57604 string characters out of 5865279
+ 347970 words of memory out of 5000000
  21055 multiletter control sequences out of 15000+600000
- 436739 words of font info for 85 fonts, out of 8000000 for 9000
+ 437817 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,8n,74p,326b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,8n,74p,1104b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/Texlive_dir/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.pdf (1 page, 56830 bytes).
+Output written on d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.pdf (1 page, 58112 bytes).
 PDF statistics:
  29 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream

@@ -35,14 +35,15 @@ This project concerns a classification problem applied to a collection of Twitte
 Training and validation of the models are conducted on a development set, containing 224,994 labelled recordings, while the set to test the models contains 74,999 recordings.\\
 The development set is composed of six fields:
 \begin{itemize}
-    \item \textit{sentiment}: field of the sentiment labels; a label is associated to each record, having value \textbf{1} if the text has a positive trait, \textbf{0} otherwise;
+    \item \textit{sentiment}: sentiment labels;
     \item \textit{ids}: numerical identifier of the tweet;
     \item \textit{date}: publication date of the tweet;
     \item \textit{flag}: query used to collect the tweet;
     \item \textit{user}: name of the user that posted the tweet;
     \item \textit{text}: text of the tweet. 
 \end{itemize}
-Analysing the development set it is possible to notice that it is not well balanced: 130,157 
+The \textit{sentiment} field contains a label for each record. There are two classes: the text is considered having a positive trait if the label value is \textbf{1}, instead it is considered negative if the label value is \textbf{0}. The classes are not well balanced, indeed there are 130,157 data points having label 1, and just 94,837 having value 0. An exploratory analysis of the dataset was performed, to study the contents of all the fields and understand which features should be taken into account.\\
+The \textit{ids} field (i.e., the row identifiers) presents 278 pairs of duplicates, each one having one row of the related pair of rows associated to a positive sentiment, and the other one to a negative sentiment; since it is not possible to know the correct sentiment for these records, they do not add any insight and so they were removed during the data cleaning. The \textit{date} field shows that the tweets, both in the development dataset and in the evaluation dataset, were posted between April 6\textsuperscript{th} 2009 and June 25\textsuperscript{th} 2009; this suggests that the data should be homogeneous across the datasets, with a similar distribution of sentiment. The \textit{flag} field presents a unique value in all tweets in both the datasets, so it is not useful for the analysis and it can be discarded. The \textit{user} field contains the names of 10,647 distinct users; each user wrote at least 15 tweets (considering both the datasets), but some users were much more prolific than others.
 
 
 

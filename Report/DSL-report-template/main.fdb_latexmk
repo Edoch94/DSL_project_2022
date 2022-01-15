@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1642236800 "main.aux" "main.bbl" "main" 1642237194
+["bibtex main"] 1642236800 "main.aux" "main.bbl" "main" 1642260454
   "bibliography.bib" 1642236713 217 13444167a258fa31c4cd0becb47c08a8 ""
   "d:/Texlive_dir/texlive/2020/texmf-dist/bibtex/bst/base/ieeetr.bst" 1611150244 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
   "main.aux" 1642237194 983 d43997a65d4f2af0d5331c5767007ed8 "pdflatex"
   (generated)
-  "main.blg"
   "main.bbl"
-["pdflatex"] 1642237193 "d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/main.tex" "d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/main.pdf" "main" 1642237194
+  "main.blg"
+["pdflatex"] 1642237193 "d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/main.tex" "d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/main.pdf" "main" 1642260454
   "IEEEtran.cls" 1642236712 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
   "d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/main.aux" 1642237194 983 d43997a65d4f2af0d5331c5767007ed8 ""
   "d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/main.tex" 1642237192 1646 480d565a9bb23b29ed567b69b9ed9929 ""
@@ -62,8 +62,8 @@
   "main.bbl" 1642236801 203 595159fb219db001bdceaa71a0d3cccd "bibtex main"
   "main.tex" 1642237192 1646 480d565a9bb23b29ed567b69b9ed9929 ""
   (generated)
-  "d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/main.pdf"
-  "d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/main.log"
   "main.pdf"
-  "main.log"
+  "d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/main.pdf"
   "main.aux"
+  "main.log"
+  "d:/Documenti/Git_repositories/DSL_project/Report/DSL-report-template/main.log"

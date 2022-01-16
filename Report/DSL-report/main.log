@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.20)  16 JAN 2022 00:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.20)  16 JAN 2022 13:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -222,20 +222,20 @@ File: l3backend-pdftex.def 2021-01-09 L3 backend support: PDF output (pdfTeX)
 ) (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 -- Lines per column: 56 (exact).
 (d:/Texlive_dir/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -257,14 +257,48 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (d:/Texlive_dir/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
  (d:/Texlive_dir/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
  (d:/Texlive_dir/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.bbl)
+)
+<./images//user_per_tweet.png, id=1, 433.62pt x 289.08pt>
+File: ./images//user_per_tweet.png Graphic file (type png)
+<use ./images//user_per_tweet.png>
+Package pdftex.def Info: ./images//user_per_tweet.png  used on input line 49.
+(pdftex.def)             Requested size: 258.0pt x 172.00693pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 49--50
+[][] 
+ []
+
+<./images//average_user_sentiment.png, id=3, 433.62pt x 289.08pt>
+File: ./images//average_user_sentiment.png Graphic file (type png)
+<use ./images//average_user_sentiment.png>
+Package pdftex.def Info: ./images//average_user_sentiment.png  used on input line 55.
+(pdftex.def)             Requested size: 258.0pt x 172.00693pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 55--56
+[][] 
+ []
+
+<./images//internal_similarity_users.png, id=4, 433.62pt x 289.08pt>
+File: ./images//internal_similarity_users.png Graphic file (type png)
+<use ./images//internal_similarity_users.png>
+Package pdftex.def Info: ./images//internal_similarity_users.png  used on input line 61.
+(pdftex.def)             Requested size: 258.0pt x 172.00693pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 61--62
+[][] 
+ []
+
+[1{d:/Texlive_dir/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/./images//user_per_tweet.png> <d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/./images//average_user_sentiment.png>] (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -276,23 +310,22 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[1{d:/Texlive_dir/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[2
 
-
-] (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.aux) ) 
+ <d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/./images//internal_similarity_users.png>] (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.aux) ) 
 Here is how much of TeX's memory you used:
- 3889 strings out of 479304
- 57604 string characters out of 5865279
- 347970 words of memory out of 5000000
- 21055 multiletter control sequences out of 15000+600000
+ 3916 strings out of 479304
+ 58424 string characters out of 5865279
+ 350009 words of memory out of 5000000
+ 21079 multiletter control sequences out of 15000+600000
  437817 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,8n,74p,1104b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,8n,74p,1138b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/Texlive_dir/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.pdf (1 page, 58112 bytes).
+Output written on d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.pdf (2 pages, 152558 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
- 20 compressed objects within 1 object stream
+ 39 PDF objects out of 1000 (max. 8388607)
+ 23 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

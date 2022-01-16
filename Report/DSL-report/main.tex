@@ -44,7 +44,10 @@ The development set is composed of six fields:
     \item \textit{text}: text of the tweet. 
 \end{itemize}
 The \textit{sentiment} field contains a label for each record. There are two classes: the text is considered having a positive trait if the label value is \textbf{1}, instead it is considered negative if the label value is \textbf{0}. The classes are not well balanced, indeed there are 130,157 data points having label 1, and just 94,837 having value 0. An exploratory analysis of the dataset was performed, to study the contents of all the fields and understand which features should be taken into account.\\
-The \textit{ids} field (i.e., the row identifiers) presents 278 pairs of duplicates, each one having one row of the related pair of rows associated to a positive sentiment, and the other one to a negative sentiment; since it is not possible to know the correct sentiment for these records, they do not add any insight and so they were removed during the data cleaning. The \textit{date} field shows that the tweets, both in the development dataset and in the evaluation dataset, were posted between April 6\textsuperscript{th} 2009 and June 25\textsuperscript{th} 2009; this suggests that the data should be homogeneous across the datasets, with a similar distribution of sentiment. The \textit{flag} field presents a unique value in all tweets in both the datasets, so it is not useful for the analysis and it can be discarded. The \textit{user} field contains the names of 10,647 distinct users; each user wrote at least 15 tweets (considering the datasets), but some users were much more prolific than others (figure \ref{fig:user_per_tweet}).
+The \textit{ids} field (i.e., the row identifiers) presents 278 pairs of duplicates, each one having one row of the related pair of rows associated to a positive sentiment, and the other one to a negative sentiment; since it is not possible to know the correct sentiment for these records, they do not add any insight and so they were removed during the data cleaning. \\
+The \textit{date} field shows that the tweets, both in the development dataset and in the evaluation dataset, were posted between April 6\textsuperscript{th} 2009 and June 25\textsuperscript{th} 2009; this suggests that the data should be homogeneous across the datasets, with a similar distribution of sentiment. \\
+The \textit{flag} field presents a unique value in all tweets in both the datasets, so it is not useful for the analysis and it can be discarded. \\
+The \textit{user} field contains the names of 10,647 distinct users; each user wrote at least 15 tweets (considering the datasets), but some users were much more prolific than others (figure \ref{fig:user_per_tweet}).
 \begin{figure}
     \includegraphics[width=0.5\textwidth]{user_per_tweet}
     \caption[Histogram of users per tweets]{Histogram representing the number of users per number of tweets}
@@ -56,21 +59,30 @@ Analysing the user average sentiment distribution (figure \ref{fig:average_user_
     \caption[User average sentiment]{Histogram representing the number of users per average sentiment}
     \label{fig:average_user_sentiment}
 \end{figure}
-This odd behaviour led to a deeper investigation of the texts written by each user; a mean cosine similarity among the tweets posted by the same user was computed (figure \ref{fig:internal_similarity_users}), and it showed that a small but significant group of users
+This odd behaviour led to a deeper investigation of the texts written by each user; a mean cosine similarity among the tweets posted by the same user was computed (figure \ref{fig:internal_similarity_users}), and it showed that a small but significant group of users used the exact same words in multiple tweets.  
 \begin{figure}
     \includegraphics[width=0.5\textwidth]{internal_similarity_users}
     \caption[Mean cosine similarity]{Histogram representing the number of users per mean cosine similarity computed on the posted tweets of each user}
     \label{fig:internal_similarity_users}
 \end{figure}
-
-
+Some of the users that posted the largest number of tweets, also have the highest average cosine similarity among their tweets; a precise inspection of these users suggests that most of them behave as be bots, regularly posting the same message. Later, in the preprocessing step, the presence of bots in the dataset is tackled. \\
+Finally, the \textit{text} field collects the tweet messages. The messages are written in english, they may contain tags (i.e., starting with "@"), hashtags (i.e., starting with "\#"), and URLs. HTML character entities (e.g., "\textit{\&amp;}", "\textit{\&quot;}") are present too. \\
+The \textit{text} field is the only one which is going to be considered to train the model and to predict the text sentiment; indeed, the \textit{date} field is only useful to show that both the development set and the evaluation set refer to the same time period; instead, the \textit{user} field is not taken into account because this would instruct the model to predict the sentiment based also on the user who posted the message, loosing the more general scope the model should have. 
 
 \section{Proposed approach}
-In this section, you will present your solution. Please fill in accordingly.
-
-You can use citations as follows: \cite{goodfellow2016deep} (you can add BibTeX citations in the \textit{bibliography.bib} file).
-
 \subsection{Preprocessing}
+The model evaluation is made using the evaluation set as reference. As said before, the development set and the evaluation set share the same characteristics, and, presumably, the same source. Basing the model performance on this evaluation set may lead to overfitting, making the model inadequate to predict the tweet sentiment outside this project. Therefore, two possible preprocessing paths have been designed: one more complex, composed of several steps, and more suitable to for a general application; and a much simpler preprocessing path, consisting just in the first two steps of the complex one, that performs better, but probably less general. \\
+The message cleaning steps composing the more articulate preprocessing path are the following
+\begin{enumerate}
+    \item "\textit{\&amp;}" HTML entities are removed;
+    \item "\textit{\&quot;}" HTML entities are removed; 
+    \item Words staring with \textit{@} are removed: these words are user tags, and do not give insights regarding the sentiment of the message; 
+    \item Words staring with \textit{http} are removed: these words are URLs, and do not give insights regarding the sentiment of the message;
+    \item Punctuation is removed;
+    \item Stemming is performed, using the Snowball stemmer offered by the nltk module;
+    \item Negations in sentences are stressed appending in subsequent words a "\textit{\_NEG}" suffix.
+\end{enumerate}
+After these steps, tf-idf is applied on 
 \subsection{Model selection}
 \subsection{Hyperparameters tuning}
 
@@ -79,6 +91,8 @@ Here you will present your results (models \& configurations selected, performan
 
 \section{Discussion}
 Any relevant discussion goes here.
+In this section, you will present your solution. Please fill in accordingly.
+You can use citations as follows: \cite{goodfellow2016deep} (you can add BibTeX citations in the \textit{bibliography.bib} file).
 
 \bibliography{bibliography}
 \bibliographystyle{ieeetr}

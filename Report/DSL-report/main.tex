@@ -65,27 +65,34 @@ This odd behaviour led to a deeper investigation of the texts written by each us
     \caption[Mean cosine similarity]{Histogram representing the number of users per mean cosine similarity computed on the posted tweets of each user}
     \label{fig:internal_similarity_users}
 \end{figure}
-Some of the users that posted the largest number of tweets, also have the highest average cosine similarity among their tweets; a precise inspection of these users suggests that most of them behave as be bots, regularly posting the same message. Later, in the preprocessing step, the presence of bots in the dataset is tackled. \\
+Some of the users that posted the largest number of tweets, also have the highest average cosine similarity among their tweets; a precise inspection of these users suggests that most of them behave as bots, regularly posting the same message. The problem of bot identification can be addressed using machine learning frameworks, as the one suggested by Kantepe and Ganiz \cite{8093483}, however for this project a simple removal of suspicious users is performed in the preprocessing step. \\
 Finally, the \textit{text} field collects the tweet messages. The messages are written in english, they may contain tags (i.e., starting with "@"), hashtags (i.e., starting with "\#"), and URLs. HTML character entities (e.g., "\textit{\&amp;}", "\textit{\&quot;}") are present too. \\
 The \textit{text} field is the only one which is going to be considered to train the model and to predict the text sentiment; indeed, the \textit{date} field is only useful to show that both the development set and the evaluation set refer to the same time period; instead, the \textit{user} field is not taken into account because this would instruct the model to predict the sentiment based also on the user who posted the message, loosing the more general scope the model should have. 
 
 \section{Proposed approach}
 \subsection{Preprocessing}
-The model evaluation is made using the evaluation set as reference. As said before, the development set and the evaluation set share the same characteristics, and, presumably, the same source. Basing the model performance on this evaluation set may lead to overfitting, making the model inadequate to predict the tweet sentiment outside this project. Therefore, two possible preprocessing paths have been designed: one more complex, composed of several steps, and more suitable to for a general application; and a much simpler preprocessing path, consisting just in the first two steps of the complex one, that performs better, but probably less general. \\
-The message cleaning steps composing the more articulate preprocessing path are the following
+The model evaluation is made using the evaluation set as reference. As said before, the development set and the evaluation set share the same characteristics, and, presumably, the same source. Basing the model performance on this evaluation set may lead to overfitting, making the model inadequate to predict the tweet sentiment outside this project. Therefore, two possible preprocessing paths have been designed: one more complex, composed of several steps, and more suitable to a general application; and one much simpler, consisting just in the first two steps of the complex one, that performs better, but is probably less general. \\
+The message cleaning steps composing the more articulate preprocessing path were partially influenced by \cite{ZainuddinNurulhuda2016TFSa}. The steps are the following
 \begin{enumerate}
     \item "\textit{\&amp;}" HTML entities are removed;
     \item "\textit{\&quot;}" HTML entities are removed; 
     \item Words staring with \textit{@} are removed: these words are user tags, and do not give insights regarding the sentiment of the message; 
     \item Words staring with \textit{http} are removed: these words are URLs, and do not give insights regarding the sentiment of the message;
     \item Punctuation is removed;
-    \item Stemming is performed, using the Snowball stemmer offered by the nltk module;
+    \item Stemming is performed, using the Snowball stemmer by Porter \cite{Porter2006};
     \item Negations in sentences are stressed appending in subsequent words a "\textit{\_NEG}" suffix.
+    \item Exclusion of users behaving as bots: as seen before, some users write the same message multiple times (i.e., users that have an high average cosine similarity computed on their tweets), always associated with the same sentiment. These users should be excluded, since they poll
 \end{enumerate}
-After these steps, tf-idf is applied on 
+After these steps, the features are extracted tokeninzing the meassages and creating a bag-of-words; the schema applied to weight the words is the \textbf{tf-idf} (i.e., term frequency - inverse document frequency), meaning that each word importance increases as its frequency in the same meassage increases, and lowers the more the word is used across all the messages in the collection. No maximum or minimum document frequency is set for a word to be considered, and also no maximum number of words is set; this means that the bag-of-words includes all the words the appear in the document collection. Other preprocessing options, such as the removal of stopwords, the type of normalization, and the N-Gram (i.e., the contiguous sequence of N items from a given sample of text or speech) length, are considered as hyperparameters of the preprocessing step.
 \subsection{Model selection}
+Two fast and light classification models were assessed: 
+\begin{itemize}
+    \item Naive Bayes Classifiers: it is a classifier family commonly employed in sentiment analysis contexts \cite{MEDHAT20141093}. It uses the Bayes Theorem to predict the probability that a given feature set belongs to a particular label. The Naive Bayes Classifier family include several algorithms, in particular the Multinomial and the Bernoulli classifiers are often for document classification, with similar performance \cite{8776800}. For this project, given that the tf-idf word weighting schema is used instead of a basic term occurrence, the Multinomial Naive Bayes classifier was selected. 
+    \item Support Vector Machine Classifier: these algorithms carry the classification task determining the linear separators in the search space which can best separate the different classes. SVCs have already been used in sentiment analysis contexts, achieving good results \cite{6914200} Because of the extent of the dataset, in particular concerning the feaures, only the simpler Linear Support Vector Classifier was considered. 
+\end{itemize}
+The best performing hyperparameter configuration was identified using a grid search.
 \subsection{Hyperparameters tuning}
-
+The development set is 90/10 train/validation splitted, given that the development set is fairly large, and a grid search is run on the traning subset. A linear SVM and a Multinomial Naive Bayes with their default configurations are trained and their performances are assessed based on the resulting macro f1 score.
 \section{Results}
 Here you will present your results (models \& configurations selected, performance achieved)
 

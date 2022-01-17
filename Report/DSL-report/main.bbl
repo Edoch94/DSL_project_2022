@@ -1,5 +1,37 @@
 \begin{thebibliography}{1}
 
+\bibitem{8093483}
+M.~Kantepe and M.~C. Ganiz, ``Preprocessing framework for twitter bot
+  detection,'' in {\em 2017 International Conference on Computer Science and
+  Engineering (UBMK)}, pp.~630--634, 2017.
+
+\bibitem{ZainuddinNurulhuda2016TFSa}
+N.~Zainuddin, A.~Selamat, and R.~Ibrahim, ``Twitter feature selection and
+  classification using support vector machine for aspect-based sentiment
+  analysis,'' in {\em Trends in Applied Knowledge-Based Systems and Data
+  Science}, vol.~9799 of {\em Lecture Notes in Computer Science}, (Cham),
+  pp.~269--279, Springer International Publishing, 2016.
+
+\bibitem{Porter2006}
+M.~F. Porter, ``An algorithm for suffix stripping,'' {\em Program}, vol.~40,
+  pp.~211--218, Jan 2006.
+
+\bibitem{MEDHAT20141093}
+W.~Medhat, A.~Hassan, and H.~Korashy, ``Sentiment analysis algorithms and
+  applications: A survey,'' {\em Ain Shams Engineering Journal}, vol.~5, no.~4,
+  pp.~1093--1113, 2014.
+
+\bibitem{8776800}
+G.~Singh, B.~Kumar, L.~Gaur, and A.~Tyagi, ``Comparison between multinomial and
+  bernoulli naïve bayes for text classification,'' in {\em 2019 International
+  Conference on Automation, Computational and Technology Management (ICACTM)},
+  pp.~593--596, 2019.
+
+\bibitem{6914200}
+N.~Zainuddin and A.~Selamat, ``Sentiment analysis using support vector
+  machine,'' in {\em 2014 International Conference on Computer, Communications,
+  and Control Technology (I4CT)}, pp.~333--337, 2014.
+
 \bibitem{goodfellow2016deep}
 I.~Goodfellow, Y.~Bengio, A.~Courville, and Y.~Bengio, {\em Deep learning},
   vol.~1.

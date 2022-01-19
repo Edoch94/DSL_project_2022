@@ -32,9 +32,14 @@ N.~Zainuddin and A.~Selamat, ``Sentiment analysis using support vector
   machine,'' in {\em 2014 International Conference on Computer, Communications,
   and Control Technology (I4CT)}, pp.~333--337, 2014.
 
-\bibitem{goodfellow2016deep}
-I.~Goodfellow, Y.~Bengio, A.~Courville, and Y.~Bengio, {\em Deep learning},
-  vol.~1.
-\newblock MIT press Cambridge, 2016.
+\bibitem{ZhangLeiWangShuaiLiuBing}
+L.~Zhang, S.~Wang, and B.~Liu, ``Deep learning for sentiment analysis: A
+  survey,'' {\em WIREs Data Mining and Knowledge Discovery}, vol.~8, no.~4,
+  p.~e1253, 2018.
+
+\bibitem{elbagir2019twitter}
+S.~Elbagir and J.~Yang, ``Twitter sentiment analysis using natural language
+  toolkit and vader sentiment,'' in {\em Proceedings of the International
+  MultiConference of Engineers and Computer Scientists}, vol.~122, p.~16, 2019.
 
 \end{thebibliography}

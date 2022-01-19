@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.20)  18 JAN 2022 00:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.20)  19 JAN 2022 01:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -298,7 +298,18 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 64--65
 [1{d:/Texlive_dir/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/./images//user_per_tweet.png> <d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/./images//average_user_sentiment.png>] [2 <d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/./images//internal_similarity_users.png>] (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.bbl)
+ <d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/./images//user_per_tweet.png> <d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/./images//average_user_sentiment.png>] [2 <d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/./images//internal_similarity_users.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 97.
+
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 101.
+(d:/Texlive_dir/texlive/2020/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
+ (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -310,22 +321,20 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3
-
-] (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.aux) ) 
+[3] (d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.aux) ) 
 Here is how much of TeX's memory you used:
- 3924 strings out of 479304
- 58534 string characters out of 5865279
- 353027 words of memory out of 5000000
- 21087 multiletter control sequences out of 15000+600000
- 437817 words of font info for 86 fonts, out of 8000000 for 9000
+ 3969 strings out of 479304
+ 59166 string characters out of 5865279
+ 356038 words of memory out of 5000000
+ 21119 multiletter control sequences out of 15000+600000
+ 445333 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,8n,74p,958b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
-{d:/Texlive_dir/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.pdf (3 pages, 164171 bytes).
+ 68i,15n,74p,1286b,337s stack positions out of 5000i,500n,10000p,200000b,80000s
+{d:/Texlive_dir/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/Texlive_dir/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on d:/Documenti/Git_repositories/DSL_project/Report/DSL-report/main.pdf (3 pages, 175770 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 46 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

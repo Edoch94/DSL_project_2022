@@ -53,7 +53,7 @@ The \textit{user} field contains the names of 10,647 distinct users; each user w
     \caption[Histogram of users per tweets]{Histogram representing the number of users per number of tweets}
     \label{fig:user_per_tweet}
 \end{figure}
-Analysing the user average sentiment distribution (figure \ref{fig:average_user_sentiment}), it is possible to notice that there are many users whose tweets are almost exclusively positive.
+Analysing the user average sentiment distribution (figure \ref{fig:average_user_sentiment}), it is possible to notice that there are many users whose tweets are almost exclusively positive (or negative).
 \begin{figure}
     \includegraphics[width=0.5\textwidth]{average_user_sentiment}
     \caption[User average sentiment]{Histogram representing the number of users per average sentiment}
@@ -71,9 +71,10 @@ The \textit{text} field is the only one which is going to be considered to train
 
 \section{Proposed approach}
 \subsection{Preprocessing}
-The model evaluation is made using the evaluation set as reference. As said before, the development set and the evaluation set share the same characteristics, and, presumably, the same source. Basing the model performance on this evaluation set may lead to overfitting, making the model inadequate to predict the tweet sentiment outside this project. Therefore, two possible preprocessing paths have been designed: one more complex, composed of several steps, and more suitable to a general application; and one much simpler, consisting just in the first two steps of the complex one, that performs better, but is probably less general. \\
+The model evaluation is made using the evaluation set as reference. As said before, the development set and the evaluation set share the same characteristics, and, presumably, the same source. Basing the model performance on this evaluation set may lead to overfitting, making the model inadequate to predict the tweet sentiment outside this project. Therefore, two possible preprocessing paths have been designed: one more complex, composed of several steps, and more suitable to a general application; and one much simpler, consisting just in the first three steps of the complex one, that performs better, but is probably less general. \\
 The message cleaning steps composing the more articulate preprocessing path were partially influenced by \cite{ZainuddinNurulhuda2016TFSa}. The steps are the following
 \begin{enumerate}
+    \item Removal of rows having the same \textit{id} value
     \item "\textit{\&amp;}" HTML entities are removed;
     \item "\textit{\&quot;}" HTML entities are removed; 
     \item Words staring with \textit{@} are removed: these words are user tags, and do not give insights regarding the sentiment of the message; 
@@ -81,25 +82,36 @@ The message cleaning steps composing the more articulate preprocessing path were
     \item Punctuation is removed;
     \item Stemming is performed, using the Snowball stemmer by Porter \cite{Porter2006};
     \item Negations in sentences are stressed appending in subsequent words a "\textit{\_NEG}" suffix.
-    \item Exclusion of users behaving as bots: as seen before, some users write the same message multiple times (i.e., users that have an high average cosine similarity computed on their tweets), always associated with the same sentiment. These users should be excluded, since they poll
+    \item Exclusion of users behaving as bots: as seen before, some users write the same message multiple times (i.e., users that have an high average cosine similarity computed on their tweets), always associated with the same sentiment. These users should be excluded, since they "pullute" the dataset. To identify the most damaging ones, for each user a \textit{user\_suspiciousness} metric was computed\footnote{The \textit{user\_suspiciousness} is computed as the product between the mean cosine similarity among the user messages, and the "extremism" of his sentiment, that is the distance between the user average sentiment and a neutral sentiment (i.e., 0.5); both the mean cosine similarity and the sentiment extremism are scaled between 0 and 1 before the product.}, and the users having a value higher than 0.9 were dropped from the development set. 
 \end{enumerate}
-After these steps, the features are extracted tokeninzing the meassages and creating a bag-of-words; the schema applied to weight the words is the \textbf{tf-idf} (i.e., term frequency - inverse document frequency), meaning that each word importance increases as its frequency in the same meassage increases, and lowers the more the word is used across all the messages in the collection. No maximum or minimum document frequency is set for a word to be considered, and also no maximum number of words is set; this means that the bag-of-words includes all the words the appear in the document collection. Other preprocessing options, such as the removal of stopwords, the type of normalization, and the N-Gram (i.e., the contiguous sequence of N items from a given sample of text or speech) length, are considered as hyperparameters of the preprocessing step.
+After these steps, the features are extracted tokeninzing the messages and creating a bag-of-words; the schema applied to weight the words is the \textbf{tf-idf} (i.e., term frequency - inverse document frequency), meaning that each word importance increases as its frequency in the same meassage increases, and lowers the more the word is used across all the messages in the collection. No maximum or minimum document frequency is set for a word to be considered, and also no maximum number of words is set; this means that the bag-of-words includes all the words the appear in the document collection. Other preprocessing options, such as the removal of stopwords, the type of normalization, and the N-Gram\footnote{An N-Gram is a contiguous sequence of N items from a given sample of text or speech; if the items are words, N-Grams are also called \textit{shingles}} length, are considered as hyperparameters of the preprocessing step.
 \subsection{Model selection}
 Two fast and light classification models were assessed: 
 \begin{itemize}
-    \item Naive Bayes Classifiers: it is a classifier family commonly employed in sentiment analysis contexts \cite{MEDHAT20141093}. It uses the Bayes Theorem to predict the probability that a given feature set belongs to a particular label. The Naive Bayes Classifier family include several algorithms, in particular the Multinomial and the Bernoulli classifiers are often for document classification, with similar performance \cite{8776800}. For this project, given that the tf-idf word weighting schema is used instead of a basic term occurrence, the Multinomial Naive Bayes classifier was selected. 
-    \item Support Vector Machine Classifier: these algorithms carry the classification task determining the linear separators in the search space which can best separate the different classes. SVCs have already been used in sentiment analysis contexts, achieving good results \cite{6914200} Because of the extent of the dataset, in particular concerning the feaures, only the simpler Linear Support Vector Classifier was considered. 
+    \item Naive Bayes Classifiers: it is a classifier family commonly employed in sentiment analysis contexts \cite{MEDHAT20141093}. It uses the Bayes Theorem to predict the probability that a given feature set belongs to a particular label. The Naive Bayes Classifier family include several algorithms, in particular the Multinomial and the Bernoulli classifiers are often for document classification, with similar performance \cite{8776800}. For this project, given that the tf-idf word weighting schema is used instead of a basic term occurrence, the Multinomial Naive Bayes classifier was selected for evaluation.
+    \item Support Vector Machine Classifier: these algorithms carry the classification task determining the linear separators in the search space which can best separate the different classes. SVCs have already been used in sentiment analysis contexts, achieving good results \cite{6914200}. Because of the extent of the dataset, in particular concerning the features, only the simpler Linear Support Vector Classifier was considered. 
 \end{itemize}
-The best performing hyperparameter configuration was identified using a grid search.
+The best performing hyperparameter configuration was identified using a grid search. 
 \subsection{Hyperparameters tuning}
-The development set is 90/10 train/validation splitted, given that the development set is fairly large, and a grid search is run on the traning subset. A linear SVM and a Multinomial Naive Bayes with their default configurations are trained and their performances are assessed based on the resulting macro f1 score.
+Both the preprocessing and the model Hyperparameters were tuned. The considered hyperparameters configurations are summarized in table \ref{table: hyperparameters_considered}.
+\begin{table}[]
+    \caption{Considered hyperparameters}
+    \begin{tabular}{l|c|c}
+    \textbf{Preprocessing / Model} & \textbf{Hyperparameter}                                                                                                                                         & \textbf{Values}                                                                                                                                                                                             \\ \hline
+    TfidfVectorizer                & \textit{\begin{tabular}[c]{@{}c@{}}stopwords\\ ngram range\\ max features\\ max df\\ min df\\ binary\\ norm\\ use idf\\ smooth idf\\ sublinear tf\end{tabular}} & \begin{tabular}[c]{@{}c@{}}\{"english", None\}\\ \{(1,2), (1,3)\}\\ \{None,20000\}\\ \{1.0\}\\ \{1\}\\ \{True, False\}\\ \{l1, l2\}\\ \{True\}\\ \{True, False\}\\ \{False\}\end{tabular} \\ \hline
+    Multinomial NB                 & \textit{alpha}                                                                                                                                                  & \{.01,.02,.05,.1,.2,.5,1.0\}                                                                                                                                                                    \\ \hline
+    SVC                            & \textit{\begin{tabular}[c]{@{}c@{}}penalty\\ tolerance\\ C\\ max iterations\end{tabular}}                                                                       & \begin{tabular}[c]{@{}c@{}}\{l1, l2\}\\ \{1e-2, 1e-3\}\\ \{1, 10\}\\ \{100\}\end{tabular}                                                                                                              
+    \end{tabular}
+	\label{table: hyperparameters_considered}
+\end{table}
+
+The development set is 90/10 train/validation splitted, given that the development set is fairly large, and a grid search is run on the traning subset. A linear SVM and a Multinomial Naive Bayes with their default configurations, without using any previous preprocessing, were trained and their performances were used as beseline for comparison.
 \section{Results}
-Here you will present your results (models \& configurations selected, performance achieved)
+
 
 \section{Discussion}
-Any relevant discussion goes here.
-In this section, you will present your solution. Please fill in accordingly.
-You can use citations as follows: \cite{goodfellow2016deep} (you can add BibTeX citations in the \textit{bibliography.bib} file).
+The solution found using the tuned models outperfom the naive approaches, and both the models are able to overcome the baseline score of 0.753 at their best configuration. In particular, the Linear Support Vector Classifier reaches good results, especially considering the model simplicity and speed. However, in this project the critical step was the preprocessing: the usage of bigrams and trigrams combined with unigrams led to a wide increase in the f1-score.\\
+To further improve the obtained results, other more complex machine learning models should be considered, such as non linear SVCs, ANNs, or Random Forests, maybe preceded by the application of a dimensionality reduction algorithm, like SVD, to reduce the number of features and to extract the most meaningful ones. \\Another possible solution is the usage of deep learning models with an embedding layer, that could also be based on a pretrained word embedding stack, substantially reducing the time required for the model training. The use of deep learning models in the context of sentiment analysis has been widely explored in recent years, with good results (see Zhang et al. \cite{ZhangLeiWangShuaiLiuBing}). \\It might also be interesting to apply an unsupervised machine learning method to the dataset and compare its results with the supervised methods. A possible model is VADER, that was designed specifically for sentiment analysis, and is sensitive to both polarity (positive/negative) and intensity (strength) of emotions expressed in texts; the usage of this model in a context analogous to the one of this project is discussed by Elbagir and Yang \cite{elbagir2019twitter}.
 
 \bibliography{bibliography}
 \bibliographystyle{ieeetr}

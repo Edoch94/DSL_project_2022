@@ -1,0 +1,2 @@
+,mean_fit_time,std_fit_time,mean_score_time,std_score_time,param_multinomialNB__alpha,param_tfidf__max_df,params,split0_test_score,split1_test_score,split2_test_score,mean_test_score,std_test_score,rank_test_score
+0,1.9033255577087402,0.06455025381128102,0.8256704807281494,0.02517089019392383,0.01,1.0,"{'multinomialNB__alpha': 0.01, 'tfidf__max_df': 1.0}",0.7158513824867245,0.7178952729597682,0.7176242515138459,0.7171236356534463,0.0009063973544431999,1

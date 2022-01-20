@@ -1,0 +1,2 @@
+,mean_fit_time,std_fit_time,mean_score_time,std_score_time,param_linearSVC__dual,param_tfidf__max_df,params,split0_test_score,split1_test_score,split2_test_score,mean_test_score,std_test_score,rank_test_score
+0,5.664656559626262,0.21367473033287826,1.0630003611246746,0.054580158509468124,False,1.0,"{'linearSVC__dual': False, 'tfidf__max_df': 1.0}",0.7753240320768988,0.7755871914479859,0.7776574091212876,0.7761895442153909,0.0010434825506032768,1
